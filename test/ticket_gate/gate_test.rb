@@ -1,6 +1,6 @@
 require 'minitest/autorun'
-require './lib/gate'
-require './lib/ticket'
+require './lib/ticket_gate/gate'
+require './lib/ticket_gate/ticket'
 
 class GateTest < Minitest::Test
 

@@ -9,5 +9,10 @@ class ProductSpec
       expect(product.name).to eq 'A great movie'
       expect(product.price).to eq 1000
     end
+
+    it 'can_private_calld' do
+      product = Product.new('A great movie', 1000)
+      expect(product.private_call).to eq "Private -> [A great movie] [Price : 1000]"
+    end
   end
 end

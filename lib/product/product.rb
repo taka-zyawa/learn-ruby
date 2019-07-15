@@ -14,9 +14,19 @@ class Product
     private_method
   end
 
+  def protected_call
+    self.protected_method
+  end
+
   private
 
   def private_method
     "Private -> #{to_s}"
+  end
+
+  protected
+
+  def protected_method
+    "Protected -> #{to_s}"
   end
 end

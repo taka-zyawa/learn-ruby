@@ -17,6 +17,10 @@ class DVD < Product
     "Sub #{private_method}"
   end
 
+  def protected_call
+    "Sub " + self.protected_method
+  end
+
   def self.static_method
     "Call static method"
   end

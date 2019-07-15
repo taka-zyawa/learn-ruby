@@ -21,6 +21,11 @@ class DVDSpec
       expect(dvd.private_call).to eq 'Sub Private -> [A great movie] [Price : 1000] [Running time : 120 minute]'
     end
 
+    it 'can_protected_call' do
+      dvd = DVD.new('A great movie', 1000, 120)
+      expect(dvd.protected_call).to eq 'Sub Protected -> [A great movie] [Price : 1000] [Running time : 120 minute]'
+    end
+
     it 'can_static_method_call' do
       expect(DVD.static_method).to eq 'Call static method'
     end

@@ -1,6 +1,5 @@
 class Gate
-
-  STATIONS = [:umeda, :juso, :mikuni].freeze
+  STATIONS = %i[umeda juso mikuni].freeze
   FARES = [150, 190].freeze
 
   def initialize(name)

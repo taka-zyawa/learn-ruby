@@ -7,6 +7,6 @@ class Ticket
   end
 
   def stamp(name)
-      @stamped_at = name
+    @stamped_at = name
   end
 end

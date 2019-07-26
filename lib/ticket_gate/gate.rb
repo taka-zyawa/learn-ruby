@@ -1,7 +1,7 @@
 class Gate
 
-  STATIONS = [:umeda, :juso, :mikuni]
-  FARES = [150, 190]
+  STATIONS = [:umeda, :juso, :mikuni].freeze
+  FARES = [150, 190].freeze
 
   def initialize(name)
     @name = name

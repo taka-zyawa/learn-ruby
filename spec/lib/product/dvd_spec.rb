@@ -30,9 +30,8 @@ class DVDSpec
       expect(DVD.static_method).to eq 'Call static method'
     end
 
-    # TODO 後で例外処理を使って実装してみる
-    # it 'can_not_private_static_method_call' do
-    #   expect(DVD.private_static_method).to eq 'Call static method'
-    # end
+    it 'can_not_private_static_method_call' do
+      expect{DVD.private_static_method}.to raise_error(NameError)
+    end
   end
 end

@@ -1,9 +1,18 @@
+require './lib/module/loggable'
+
 class Product
+  include Loggable
+
   attr_reader :price, :name
 
   def initialize(name, price)
     @name = name
     @price = price
+  end
+
+  def title
+    log "title is called]"
+    "#{@name}"
   end
 
   def to_s

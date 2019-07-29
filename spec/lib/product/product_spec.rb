@@ -5,9 +5,11 @@ class ProductSpec
 
   describe Product do
     it 'name_and_price_initialized' do
-      product = Product.new('A great movie', 1000)
-      expect(product.name).to eq 'A great movie'
-      expect(product.price).to eq 1000
+      aggregate_failures 'test initialize' do
+        product = Product.new('A great movie', 1000)
+        expect(product.name).to eq 'A great movie'
+        expect(product.price).to eq 1000
+      end
     end
 
     it 'can_private_call' do

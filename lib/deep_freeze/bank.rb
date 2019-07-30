@@ -1,3 +1,6 @@
+require './lib/module/deep_freezable'
+
 class Bank
-  CURRENCIES = ['Japan' => 'yen', 'US' => 'dollar', 'India' => 'rupee']
+  extend DeepFreezable
+  CURRENCIES = deep_freeze({'Japan' => 'yen', 'US' => 'dollar', 'India' => 'rupee'})
 end

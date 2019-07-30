@@ -1,3 +1,6 @@
+require './lib/module/deep_freezable'
+
 class Team
-  COUNTRIES = ['Japan', 'US', 'India']
+  extend DeepFreezable
+  COUNTRIES = deep_freeze(['Japan', 'US', 'India'])
 end

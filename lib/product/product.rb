@@ -39,3 +39,7 @@ class Product
     "Protected -> #{to_s}"
   end
 end
+
+p Product.include?(Loggable)
+product = Product.new('name', 1000)
+p product.is_a?(Loggable)
